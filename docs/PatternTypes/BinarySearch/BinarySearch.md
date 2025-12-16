@@ -404,6 +404,11 @@ return result
 while left <= right:
     mid = left + (right - left) // 2
 
+    # Only needed if duplicates
+    if nums[l] == nums[mid]:
+        l += 1 
+        continue
+
     # Check which half is sorted
     if arr[left] <= arr[mid]:
         # Left half is sorted
